@@ -7,7 +7,7 @@ import '../style/index.scss'
 
 const Layout = ({ children, site }) => (
   <div>
-    <Helmet title="Snipcart + DatoCMS + GatsbyJS Example" />
+    <Helmet title="Ñanka Distribuidora" />
     <div className="Container">
       <div className="Header">
         <div className="Wrap" >
@@ -19,13 +19,13 @@ const Layout = ({ children, site }) => (
             </h1>
             <div className="Header__summary snipcart-summary snipcart-checkout">
               <div className="Header__summary__title">
-                🛍 MY CART 🛍
+                🍅🥗 PEDIDO 🥗🍅
               </div>
               <div className="Header__summary__line">
-                Number of items: <span className="snipcart-total-items"></span>
+                Numero de productos: <span className="snipcart-total-items"></span>
               </div>
               <div className="Header__summary__line">
-                Total price: <span className="snipcart-total-price"></span>
+                Precio Total: <span className="snipcart-total-price"></span>
               </div>
             </div>
           </div>
@@ -36,12 +36,12 @@ const Layout = ({ children, site }) => (
       </div>
       <div className="Wrap" >
         <div className="Footer">
-          This website is just an example project to demonstrate how you can 
-          integrate <a href="https://www.gatsbyjs.org/">Gatsby</a>, <a href="https://snipcart.com/">Snipcart</a> and <a href="https://www.datocms.com">DatoCMS</a>.
+          Las imagenes de este sitio son mera referencia y la disponibilidad de los productos esta sujeto a Stock
         </div>
       </div>
     </div>
   </div>
+
 )
 
 Layout.propTypes = {

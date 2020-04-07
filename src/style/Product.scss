@@ -67,7 +67,7 @@
   flex: 1;
   text-align: right;
   text-transform: uppercase;
-  background: #663399;
+  background: $green-color;
   padding: 10px 20px;
   color: white;
   position: relative;
@@ -77,10 +77,10 @@
     text-decoration: underline;
 
     &:before {
-      content: "Yes now";
+      content: "APROVECHA!!!";
       position: absolute;
-      top: -10px;
-      left: 60%;
+      top: 100%;
+      left: 30%;
       white-space: nowrap;
       font-family: "times new roman", times, serif;
       font-weight: normal;
@@ -88,7 +88,7 @@
       mix-blend-mode: difference;
       text-transform: lowercase;
       text-decoration: overline;
-      color: #00efff;
+      color: $red-color;
       font-size: 2em;
       animation: blink 6s steps(4, end) infinite alternate-reverse;
     }

@@ -1,17 +1,24 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 
 module.exports = {
   siteMetadata: {
-    siteName: 'My Shop',
+    siteName: 'Ñanka Distribuidora',
   },
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-datocms`,
-      options: { apiToken: process.env.DATO_API_TOKEN },
+      options: { 
+        apiToken: 'ddaf9b0ffffe8d0ff90f4fb601adb0',
+        localeFallbacks: {
+          it: ['es'],
+        },
+        disableLiveReload: false,
+        previewMode: false
+       }
     },
     {
       resolve: 'gatsby-plugin-snipcart',

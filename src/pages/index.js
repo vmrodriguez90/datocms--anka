@@ -3,11 +3,12 @@ import { StaticQuery, graphql } from 'gatsby'
 import Layout from "../layouts/index"
 import Img from 'gatsby-image'
 
+
 export default () => (
   <StaticQuery
     query={graphql`
       query CatalogueQuery {
-        products: allDatoCmsProduct {
+        products: allDatoCmsProduct(filter: {locale: {eq: "es"}}) {
           edges {
             node {
               id
@@ -29,6 +30,7 @@ export default () => (
         }
       }
     `}
+
 render={data => (
   <Layout site={data.site}>
     <div className="Catalogue">
@@ -48,11 +50,12 @@ render={data => (
               </div> <div className="Product__details">
                 <div className="Product__name">
                   {product.name}
+                  { product.description }
                   <div className="Product__price">
-                    {product.price}€
+                    $ {Number(product.price).toFixed(2).toString()}
                   </div>
                 </div>
-                <span className="Product__buy">Buy now</span>
+                <span className="Product__buy">Agregar</span>
               </div>
             </div>
           </div>
